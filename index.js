@@ -17,17 +17,19 @@ let seconds = 59;
 
 function start() {
     interval = setInterval(()=> {
+         displayTime(minutes,seconds);
         if(seconds ==0){
             seconds = 59;
             minutes--;
         }
-        seconds--;
+       
     
         if(minutes==0 && seconds==0){
             stop();
             alert("Time's up");
         }
-        displayTime(minutes,seconds);
+         seconds--;
+       
      }, 1000);
 }
 function stop() {
