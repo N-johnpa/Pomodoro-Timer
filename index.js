@@ -12,18 +12,18 @@
 // }
 // // stopMyInterval();
 
-let minutes = 25;
-let seconds = 00;
+let minutes = 24;
+let seconds = 59;
 
 function start() {
     interval = setInterval(()=> {
-        if(seconds ==00){
+        if(seconds ==0){
             seconds = 59;
             minutes--;
         }
         seconds--;
     
-        if(minutes==0 && seconds==00){
+        if(minutes==0 && seconds==0){
             stop();
             alert("Time's up");
         }
@@ -35,8 +35,8 @@ clearInterval(interval);
 }
 function reset(){
     stop();
-    minutes = 25;
-    seconds = 00;
+    minutes = 24;
+    seconds = 59;
     displayTime(minutes,seconds);
 }
 function displayTime(minutes,seconds) {
